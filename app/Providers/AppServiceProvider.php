@@ -14,30 +14,25 @@ class AppServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // Define model policies here if needed
     ];
-
-    /**
-     * Register any authentication / authorization services.
-     */
     public function boot(): void
     {
         $this->registerPolicies();
 
         Gate::define('view-patients', function (User $user) {
-            return $user->role === 'admin'; // Only admin can view patients
+            return $user->role === 'admin';
         });
 
         Gate::define('delete-patient', function (User $user) {
-            return $user->role === 'admin'; // Only admin can delete
+            return $user->role === 'admin';
         });
 
         Gate::define('restore-patient', function (User $user) {
-            return $user->role === 'admin'; // Only admin can restore
+            return $user->role === 'admin';
         });
 
         Gate::define('view-sensitive-data', function (User $user) {
-            return $user->role === 'admin'; // Only admin can view emails
+            return $user->role === 'admin';
         });
     }
 }
