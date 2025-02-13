@@ -17,7 +17,7 @@ class PatientController extends Controller
 
         $this->middleware(function ($request, $next) {
             if (Auth::user()->role !== 'admin') {
-                abort(403, 'Unauthorized Access');
+                abort(403, 'Bugo gyud ka!');
             }
             return $next($request);
         });
@@ -26,7 +26,7 @@ class PatientController extends Controller
     public function index(Request $request)
     {
         if (!Gate::allows('view-patients')) {
-            abort(403, 'Unauthorized Access');
+            abort(403, 'Bugo gyud ka!');
         }
 
         $search = $request->input('search');
@@ -64,7 +64,7 @@ class PatientController extends Controller
     public function restore($id)
     {
         if (!Gate::allows('restore-patient')) {
-            abort(403, 'Unauthorized Access');
+            abort(403, 'Bugo gyud ka!');
         }
 
         $patient = Patient::withTrashed()->findOrFail($id);

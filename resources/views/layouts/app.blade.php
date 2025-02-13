@@ -31,8 +31,8 @@
         </div>
     </div>
 
-    <div class="footer">
-        <p>© {{ date('Y') }} Patient Management System - Department of Health</p>
-    </div>
+        <div class="footer">
+            @include('layouts.footer')
+        </div>
 </body>
 </html>
