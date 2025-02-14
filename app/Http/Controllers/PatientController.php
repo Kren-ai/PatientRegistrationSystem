@@ -18,7 +18,7 @@ class PatientController extends Controller
 
         $this->middleware(function ($request, $next) {
             if (Auth::user()->role !== 'admin') {
-                abort(403, 'Bugo!');
+                abort(403, 'Unauthorized Access!');
             }
             return $next($request);
         });
@@ -27,7 +27,7 @@ class PatientController extends Controller
     public function index(Request $request)
     {
         if (!Gate::allows('view-patients')) {
-            abort(403, 'Bugo!');
+            abort(403, 'Unauthorized Access!');
         }
 
         $search = $request->input('search');
@@ -38,13 +38,13 @@ class PatientController extends Controller
         if ($search) {
             $query->where(function ($q) use ($search) {
                 $q->where('first_name', 'like', "%{$search}%")
-                  ->orWhere('middle_name', 'like', "%{$search}%")
-                  ->orWhere('last_name', 'like', "%{$search}%")
-                  ->orWhere('email', 'like', "%{$search}%")
-                  ->orWhere('contact_number', 'like', "%{$search}%")
-                  ->orWhereHas('doctor', function ($q) use ($search) {
-                      $q->where('name', 'like', "%{$search}%");
-                  });
+                    ->orWhere('middle_name', 'like', "%{$search}%")
+                    ->orWhere('last_name', 'like', "%{$search}%")
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('contact_number', 'like', "%{$search}%")
+                    ->orWhereHas('doctor', function ($q) use ($search) {
+                        $q->where('name', 'like', "%{$search}%");
+                    });
             });
         }
 

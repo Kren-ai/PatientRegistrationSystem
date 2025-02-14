@@ -1,7 +1,7 @@
 <div class="navbar bg-green-700 text-white px-8 py-4 flex items-center shadow-md">
     <div class="text-xl font-bold tracking-wide">
         <a href="{{ route('dashboard') }}" class="hover:text-gray-200 transition">
-            Patient Management System
+            Patient Registration System
         </a>
     </div>
 

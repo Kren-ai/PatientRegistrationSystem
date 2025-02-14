@@ -44,7 +44,6 @@
                        value="{{ $patient->dob }}" required>
             </div>
 
-            <!-- Doctor Selection -->
             <div class="mb-4">
                 <label class="block text-gray-700 font-semibold mb-1">Assigned Doctor</label>
                 <select name="doctor_id" class="w-full border border-green-600 rounded-lg p-2 focus:ring-green-600 focus:border-green-600">

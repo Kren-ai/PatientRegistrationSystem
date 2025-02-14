@@ -70,23 +70,23 @@
                                     @can('restore-patient')
                                         <form action="{{ route('patients.restore', $patient->id) }}" method="POST" class="d-inline">
                                             @csrf
-                                            <button type="submit" class="btn btn-success btn-sm rounded-lg px-3">
+                                            <button type="submit" class="btn btn-success btn-sm rounded-lg px-2 py-1">
                                                 🔄 Restore
                                             </button>
                                         </form>
                                     @endcan
                                 @else
-                                    <a href="{{ route('patients.show', $patient->id) }}" class="btn btn-info btn-sm rounded-lg px-3">
-                                        👁 View
+                                    <a href="{{ route('patients.show', $patient->id) }}" class="btn btn-info btn-sm rounded-lg px-2 py-1">
+                                        View
                                     </a>
-                                    <a href="{{ route('patients.edit', $patient->id) }}" class="btn btn-warning btn-sm rounded-lg px-3">
-                                        ✏️ Edit
+                                    <a href="{{ route('patients.edit', $patient->id) }}" class="btn btn-warning btn-sm rounded-lg px-2 py-1">
+                                        Edit
                                     </a>
                                     @can('delete-patient')
                                         <form action="{{ route('patients.destroy', $patient->id) }}" method="POST" class="d-inline">
                                             @csrf @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm rounded-lg px-3">
-                                                🗑️ Archive
+                                            <button type="submit" class="btn btn-danger btn-sm rounded-lg px-2 py-1">
+                                                🗑️
                                             </button>
                                         </form>
                                     @endcan

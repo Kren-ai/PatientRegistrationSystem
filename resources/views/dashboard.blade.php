@@ -15,9 +15,6 @@
                 <a href="{{ route('patients.create') }}" class="btn bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800 me-2">
                     ➕ Add Patient
                 </a>
-                <a href="{{ route('doctors.index') }}" class="btn bg-blue-700 text-white rounded-lg px-4 py-2 hover:bg-blue-800">
-                    🩺 Manage Doctors
-                </a>
             </div>
 
         </div>
