@@ -11,4 +11,6 @@ Hello!👋 This is a Patient Registration System that is built using Laravel wit
 7. Type in Terminal: *php artisan key:generate*
 8. Now, start the server by entering: *npm run dev* and in the other terminal enter: *php artisan serve*
 
+Developed by: Deneb Ikenn De Los Santos
+
 Thank you!
