@@ -12,39 +12,6 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <style>
-        .content-container {
-            overflow-y: auto;
-            max-height: calc(100vh - 64px - 50px);
-            margin-left: 16rem;
-            padding-top: 4rem;
-            padding-bottom: 50px;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .sidebar {
-            position: fixed;
-            top: 4rem;
-            left: 0;
-            height: calc(100vh - 4rem);
-            width: 16rem;
-            overflow-y: auto;
-            z-index: 1000;
-        }
-        .footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 50px;
-            text-align: center;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-    </style>
 </head>
 <body>
     @include('layouts.navbar')
